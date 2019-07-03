@@ -12,10 +12,17 @@ sudo docker build -t i-doit:1.13 https://github.com/XanderFlash/docker-i-doit.gi
 
 ## Launch
 
-Replace the port 8080 with a a free port at the system.
+Replace the port 8080 with a free port at the system.
+The name can also be changed.
 
 ```bash
-sudo docker run -p 8080:80 -t i-doit:1.13
+sudo docker run --name i-doit-container -p 8080:80 -t i-doit:1.13
+```
+
+To run the container in detached mode call the following:
+
+```bash
+sudo docker run -d --name i-doit-container -p 8080:80 -t i-doit:1.13
 ```
 
 ## Work
